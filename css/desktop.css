@@ -9,86 +9,77 @@
         display: none;
     }
 
+    .alert{
+        display: block;
+        color: var(--white);
+        text-align: center;
+        background: var(--green) url('../images/banner_wave.svg');
+        padding: 20px 0;
+    }
 
     .menu-desktop {
         display: flex;        
         text-align: center;
-        gap: 40px;
+        gap: 25px;
+        list-style: none;
+        align-items: center;
         list-style: none;
       
 
     }
     .menu-desktop a{
-        text-decoration: flex;
-        color:var(--black);
+        text-decoration: none;
+        color:var(--gray-dark);
 
     }
   
+   nav img {
+       width: 10%;
+   }
 
-    header h1{
-        font-size: 3.5rem;
-        margin-bottom: 20px;
-    }
 
-    header p{
-        font-size: 1.3rem;
-    }
 
-    main .card-project{
-        position: relative;
-    }
-    main .card-project h2{
-        position: absolute;
-        bottom: 20px;
-        left:20px;
-        width: 30%;
-        font-size: 1.2rem;
-    }
 
+
+
+/*
+   header 
+   le selecteur avancé ">" permet de dire :
+   "Prend le 1er éléméent juste en dessous du parent"
+*/
+   header .alignleft,
+   main section:first-child > div,
+   main section:last-child .container > div /* ou avec la classe imagesection*/
+   {
+       display: flex;
+       align-items: center ;
+       gap:50px;
+       text-align:left;
+       padding: 50px 0;
+   }
+
+   header h1{
+       font-size: 4rem;
+   }
+
+   main section h2{
+       font-size: 3.2rem;
+   }
+
+   .imagesection p, h3{
+       text-align: center;
+   }
     
+    footer div{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 
-    main .btn-light{
-        display: none;
     }
-
-    main .newsletter{
-        display: flex;
-        flex-direction: row-reverse;
-        padding: 50px;
-    }
-    main .newsletter img{
-        width: 50%;   
-     }
-    main .newsletter div{
-        width: 50%;   
-     }
-    
-     main .newsletter h3{
-         font-size: 2rem;
-         margin-bottom: 20px;
-     }
-
-     main .newsletter .btn-green{
-         display: inline;
-         padding: 1rem;
-     }
-
-
-     footer ul {
-        list-style: none;
-        /* https://css-tricks.com/snippets/css/complete-guide-grid/ */
-        display: flex;
-        /*grid-template-columns: repeat(6, 0fr);*/
-        grid-gap: 10px;
-        margin: 50px 0;
-        padding: 0;
-        justify-content: right;
-    }
-     footer ul li  {
-        border: none;
-    }
-
- 
-
-    
+   footer div p{
+    font-size: 1.8rem;
+   }
+   footer div   ul{
+    font-size: 1rem;
+   }
 }
