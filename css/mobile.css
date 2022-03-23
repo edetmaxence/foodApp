@@ -1,0 +1,195 @@
+/*
+ * Importation des polices de caractères
+ * https://fonts.google.com/
+ */
+ @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap');
+
+/* Configuration des variables */
+:root {
+    --white: #ffffff;
+    --gray-light: #f5fbfc;
+    --gray-dark: #08090a;
+    --green: #35b8be;
+    --green-dark: #1b9097;
+    --green-light: #f5fbfc;
+    --blue-dark: #546285;
+    --font-body: 'Inter',sans-serif;
+    --img_banner:url('../images/banner_wave.svg');
+    --button-wave:url('../images/button_wave.svg');
+    
+}
+
+/**
+ * L'étoile "*" est un sélecteur universel visant 
+ * absolument toutes les balises HTML
+ */
+* {
+    margin: 0;
+    padding: 0;
+}
+
+/* Configuration du document */
+body {
+    font-family: var(--font-body);
+    font-size: 16px;
+    background-color: var(--gray-light);
+}
+
+/**
+ * Configuration de la police pour les balises heading
+ * La virgule permet de spécifier plusieurs éléments et/ou classes CSS utilisant les
+ * mêmes propriétés CSS
+ */
+h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-title);
+}
+
+
+
+/**
+*banier
+**/
+.alert,
+.menu-desktop{
+    
+    display: none;
+}
+
+
+/**
+ * Navigation
+ */
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 0;
+}
+
+nav img{
+    width: 15%;
+}
+
+.menu-burger{
+    background-color: var(--green-light);
+    border-radius: 8px;
+    padding: 20px 10px 5px 10px;
+}
+
+.menu-burger svg{
+    width: 32px;
+}
+/**
+ * Header
+ */
+header {
+    text-align: center;
+    padding: 100px 0;
+    /* margin: 100px 0; */
+    /* margin-top: 100px */
+    /* margin-bottom: 100px */
+}
+
+
+
+body {
+    color: var(--gray-dark);
+    font-family: 'Inter', sans-serif;
+    font-size: 16px;
+}
+
+.container {
+    width: 80%;
+    margin: auto;
+}
+
+/**
+ * Text color
+ */
+.text-green {
+    color: var(--green);
+}
+
+.green{
+    color: var(--green);
+}
+
+
+header,
+main{
+    text-align: center;
+    padding: 50px 0;
+}
+
+header h1{
+    font-size: 3rem;
+    font-weight: 700;
+}
+
+header p ,
+main section p{
+    font-size: 1.1rem;
+    line-height: 1.3rem;
+    font-weight: 300;
+    margin: 50px 0;
+    color:var(--blue-dark)
+}
+
+.btn-green{
+
+    text-decoration: none;
+    color:var(--white);
+    padding:14px 24px;
+    border-radius: 6px;
+
+    background:var(--green) var(--button-wave) no-repeat;
+}
+
+
+.img{
+    width: 100%;
+    margin-top: 100px;
+}
+
+
+h2{
+    font-size: 2rem;
+    color: var(--green);
+}
+main section:first-child
+ {
+    /*background-color: var(--green-light);*/
+    background-color: yellow;
+}
+
+/* last child permet de cibler un élément positionné en dernier enfant de son parent */
+main section:last-child p{
+    margin:0;
+
+}
+main section:last-child h3{
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+
+}
+footer{
+    background-color: yellow;
+    padding: 20px 0;
+}
+footer p{
+    
+    color: var(--green-dark);
+
+}
+
+footer ul{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    list-style: none;
+    color: var(--blue-dark);
+    padding-top: 1rem;
+    font-size: 0.8rem;
+    
+}
